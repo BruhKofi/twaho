@@ -413,12 +413,11 @@ JSON
         {
             "id": "categories",
             "kind": "categories",
-            "title": "Section title goes here",
-            "paragraph": "Section paragraph goes here",
+            "title": "Popular Categories",
             "button_color": {"type": "marketplace_data", "id": "primary_color"},
             "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
-            "button_title": "Section link",
-            "button_path": {"value": "https://google.com"},
+            "button_title": "Browse All Categories",
+            "button_path": {"value": "/s?category=all"},
             "category_color_hover": {"type": "marketplace_data", "id": "primary_color"},
             "categories": [
                 {
@@ -432,6 +431,18 @@ JSON
                 {
                     "category": { "type": "category", "id": 3 },
                     "background_image": {"type": "assets", "id": "category3_background_image"}
+                },
+                {
+                    "category": { "type": "category", "id": 4 },
+                    "background_image": {"type": "assets", "id": "category3_background_image"}
+                },
+                {
+                    "category": { "type": "category", "id": 5 },
+                    "background_image": {"type": "assets", "id": "category3_background_image"}
+                },
+                {
+                    "category": { "type": "category", "id": 7 },
+                    "background_image": {"type": "assets", "id": "category3_background_image"}
                 }
             ]
         },
@@ -443,20 +454,20 @@ JSON
             "button_color": {"type": "marketplace_data", "id": "primary_color"},
             "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
             "button_title": "Section link",
-            "button_path": {"value": "https://google.com"},
+            "button_path": {"value": "/s?category=all"},
             "price_color": {"type": "marketplace_data", "id": "primary_color"},
             "no_listing_image_background_color": {"type": "marketplace_data", "id": "primary_color"},
             "no_listing_image_text": {"type": "translation", "id": "no_listing_image"},
             "author_name_color_hover": {"type": "marketplace_data", "id": "primary_color"},
             "listings": [
                 {
-                    "listing": { "type": "listing", "id": 99999 }
+                    "listing": { "type": "listing", "id": 1 }
                 },
                 {
-                    "listing": { "type": "listing", "id": 99999 }
+                    "listing": { "type": "listing", "id": 1 }
                 },
                 {
-                    "listing": { "type": "listing", "id": 99999 }
+                    "listing": { "type": "listing", "id": 1 }
                 }
             ]
         },
@@ -471,7 +482,7 @@ JSON
         {
             "id": "footer",
             "kind": "footer",
-            "theme": "dark",
+            "theme": "light",
             "social_media_icon_color": {"type": "marketplace_data", "id": "primary_color"},
             "social_media_icon_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
             "links": [
@@ -485,20 +496,16 @@ JSON
                 {"service": "twitter", "url": "https://www.twitter.com/CHANGEME"},
                 {"service": "instagram", "url": "https://www.instagram.com/CHANGEME"}
             ],
-            "copyright": "This website is powered by Sharetribe marketplace platform."
+            "copyright": "powered by Africa"
         }
     ],
     "composition": [
         { "section": {"type": "sections", "id": "hero"}},
-        { "section": {"type": "sections", "id": "info-1-column"}},
-        { "section": {"type": "sections", "id": "info-2-columns"}},
-        { "section": {"type": "sections", "id": "info-3-columns"}},
         { "section": {"type": "sections", "id": "categories"}},
-        { "section": {"type": "sections", "id": "listings"}},
         { "section": {"type": "sections", "id": "footer"}}
     ],
     "assets": [
-        {"id": "hero_background_image", "src": "example_bg_lighter.jpg", "content_type": "image/jpeg"},
+        {"id": "hero_background_image", "src": "default_hero_background.jpg", "content_type": "image/jpeg"},
         {"id": "info_background_image", "src": "example_bg_lighter.jpg", "content_type": "image/jpeg"},
         {"id": "category1_background_image", "src": "example_bg_lighter.jpg", "content_type": "image/jpeg"},
         {"id": "category2_background_image", "src": "example_bg_lighter.jpg", "content_type": "image/jpeg"},
