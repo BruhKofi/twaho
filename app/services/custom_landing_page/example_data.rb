@@ -433,10 +433,6 @@ JSON
                     "background_image": {"type": "assets", "id": "category3_background_image"}
                 },
                 {
-                    "category": { "type": "category", "id": 4 },
-                    "background_image": {"type": "assets", "id": "category3_background_image"}
-                },
-                {
                     "category": { "type": "category", "id": 5 },
                     "background_image": {"type": "assets", "id": "category3_background_image"}
                 },
