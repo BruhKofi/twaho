@@ -14,7 +14,7 @@ const fontSizeMobile = '17px';
 const fontWeightMedium = '500';
 const fontWeightSemibold = '600';
 
-const proximaNovaFontFamily = "'Proxima Nova Soft', Helvetica, sans";
+const proximaNovaFontFamily = "'Montserrat', Josefin Sans, sans-serif";
 
 const lineHeight = 22;
 

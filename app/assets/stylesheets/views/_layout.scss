@@ -5,16 +5,20 @@
 */
 
 .left-navi-dropdown {
-  &:hover { background: $highlight; }
-  color: $body;
-  padding: em(10) lines(0.5);
-  border-bottom: 1px dotted $border;
+    &:hover {
+        background: $highlight;
+    }
+    color: $body;
+    padding: em(10) lines(0.5);
+    border-bottom: 1px dotted $border;
 }
 
 .wrapper {
-  @include wrapper;
+    @include wrapper;
+    padding-top: 0.75em;
+    min-height: 90vh;
 }
 
 .undo-mobile-wrapper-margin {
-  @include undo-mobile-wrapper-margin;
+    @include undo-mobile-wrapper-margin;
 }

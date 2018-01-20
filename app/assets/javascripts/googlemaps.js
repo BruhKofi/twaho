@@ -135,24 +135,98 @@ function googlemapMarkerInit(canvas,n_prefix,n_textfield,draggable,community_loc
       function(event) {
         marker.setPosition(event.latLng);
         marker.setVisible(true);
-        geocoder.geocode({"latLng":event.latLng},update_source);
+        geocoder.geocode({ componentRestrictions: {
+            country: 'GH',
+            postalCode: '233'
+          }, "latLng":event.latLng},update_source);
       }
     );
 
     google.maps.event.addListener(marker, "dragend",
       function() {
-        geocoder.geocode({"latLng":marker.getPosition()},update_source);
+        geocoder.geocode({ componentRestrictions: {
+            country: 'GH',
+            postalCode: '233'
+          }, "latLng":marker.getPosition()},update_source);
       }
     );
   }
 
   if(!visible)
     marker.setVisible(false);
+
+  function autoCompleteSearch() {
+    var mapElement = document.getElementById('listing_map_canvas');
+    var map = new google.maps.Map(mapElement, {
+      center: {lat: 5.6037, lng: 0.1870},
+      zoom: 13
+    });
+
+    var input = document.getElementById('listing_origin');
+
+    var autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete.bindTo('bounds', map);
+
+    autocomplete.setComponentRestrictions(
+      {'country': ['gh']});
+
+    var infowindow = new google.maps.InfoWindow();
+    var marker = new google.maps.Marker({
+      map: map,
+      anchorPoint: new google.maps.Point(0, -29)
+    });
+    autocomplete.addListener('place_changed', function() {
+      infowindow.close();
+      marker.setVisible(false);
+      var place = autocomplete.getPlace();
+      if (!place.geometry) {
+        // User entered the name of a Place that was not suggested and
+        // pressed the Enter key, or the Place Details request failed.
+        window.alert("No details available for input: '" + place.name + "'");
+        return;
+      }
+
+      // If the place has a geometry, then present it on a map.
+      if (place.geometry.viewport) {
+        map.fitBounds(place.geometry.viewport);
+      } else {
+        map.setCenter(place.geometry.location);
+        map.setZoom(17);  // Why 17? Because it looks good.
+      }
+      marker.setIcon(/** @type {google.maps.Icon} */({
+        url: place.icon,
+        size: new google.maps.Size(71, 71),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(17, 34),
+        scaledSize: new google.maps.Size(35, 35)
+      }));
+      marker.setPosition(place.geometry.location);
+      marker.setVisible(true);
+
+      var address = '';
+      if (place.address_components) {
+        address = [
+          (place.address_components[0] && place.address_components[0].short_name || ''),
+          (place.address_components[1] && place.address_components[1].short_name || ''),
+          (place.address_components[2] && place.address_components[2].short_name || '')
+        ].join(' ');
+      }
+
+      infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+      infowindow.open(map, marker);
+
+      document.getElementById("listing_origin_loc_attributes_google_address").value = address;
+      document.getElementById("listing_origin_loc_attributes_latitude").value = place.geometry.location.lat();
+      document.getElementById("listing_origin_loc_attributes_longitude").value = place.geometry.location.lng();
+    });
+  }
+
+  autoCompleteSearch();
 }
 
 function update_map(field) {
   if (geocoder) {
-    geocoder.geocode({'address':field.value.replace("&", "")},
+    geocoder.geocode({ 'address':field.value.replace("&", "")},
       function(response,info) {
         if (info == google.maps.GeocoderStatus.OK){
           marker.setVisible(true);
@@ -247,7 +321,7 @@ function update_model_location(place,_prefix){
 // Rideshare
 function googlemapRouteInit(canvas) {
 
-  geocoder = new google.maps.Geocoder();
+  geocoder = new google.maps.Geocoder({});
   directionsService = new google.maps.DirectionsService();
   defaultCenter = new google.maps.LatLng(60.17, 24.94);
 
