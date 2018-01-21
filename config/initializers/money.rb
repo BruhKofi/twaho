@@ -80,6 +80,22 @@ MoneyRails.configure do |config|
     smallest_denomination:  1
   }
 
+  config.register_currency = {
+    priority:               1,
+    iso_code:               "GHS",
+    name:                   "Ghana Cedi",
+    symbol:                 "GHS",
+    subunit:                "pesewa",
+    subunit_to_unit:        100,
+    symbol_first:           true,
+    html_entity:            "&#x20BD;",
+    decimal_mark:           ",",
+    thousands_separator:    ".",
+    iso_numeric:            "643",
+    smallest_denomination:  1
+  }
+
+
 
   # Register a custom currency
   #
