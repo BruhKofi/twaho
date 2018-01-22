@@ -372,7 +372,7 @@ $home-list-avatar-padding: lines(0.25);
     @extend .home-categories-link;
     font-size: 14px;
     margin-left: lines(0.5);
-    text-transform: lowercase;
+    text-transform: capitalize;
 }
 
 .home-toolbar-toggle-container {
