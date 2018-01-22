@@ -65,7 +65,8 @@ module MarketplaceService::AvailableCurrencies
       "SI" => "EUR",
       "ES" => "EUR",
       "VA" => "EUR",
-      "US" => "USD"
+      "US" => "USD",
+      "GH" => "GHS"
   }
   OLD_CURRENCY_SET = SortedSet.new(["USD"].concat(COUNTRY_CURRENCIES.values))
 
@@ -78,7 +79,7 @@ module MarketplaceService::AvailableCurrencies
     "MWK", "MXN", "MYR", "MZN", "NAD", "NGN", "NIO", "NOK", "NPR", "NZD", "PAB", "PEN", "PGK", "PHP", "PKR", "PLN",
     "PYG", "QAR", "RON", "RSD", "RUB", "RWF", "SAR", "SBD", "SCR", "SEK", "SGD", "SHP", "SLL", "SOS", "SRD", "STD",
     "SVC", "SZL", "THB", "TJS", "TOP", "TRY", "TTD", "TWD", "TZS", "UAH", "UGX", "USD", "UYU", "UZS", "VND", "VUV",
-    "WST", "XAF", "XCD", "XOF", "XPF", "YER", "ZAR", "ZMW",
+    "WST", "XAF", "XCD", "XOF", "XPF", "YER", "ZAR", "ZMW", "GHS",
   ]
 
   # Austria, Belgium, Denmark, Finland, France, Germany, Ireland, Luxembourg, Netherlands, Norway, Spain, Sweden, Switzerland, the United Kingdom, the United States
