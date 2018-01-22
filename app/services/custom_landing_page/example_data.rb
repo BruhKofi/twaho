@@ -501,7 +501,7 @@ JSON
         { "section": {"type": "sections", "id": "footer"}}
     ],
     "assets": [
-        {"id": "hero_background_image", "src": "default_hero_background.jpg", "content_type": "image/jpeg"},
+        {"id": "hero_background_image", "src": "felipe-luiz-smile-ghana-twaho-market.jpg", "content_type": "image/jpeg"},
         {"id": "info_background_image", "src": "example_bg_lighter.jpg", "content_type": "image/jpeg"},
         {"id": "category1_background_image", "src": "example_bg_lighter.jpg", "content_type": "image/jpeg"},
         {"id": "category2_background_image", "src": "example_bg_lighter.jpg", "content_type": "image/jpeg"},
