@@ -308,10 +308,10 @@ JSON
     "settings": {
         "marketplace_id": 1234,
         "locale": "en",
-        "sitename": "example-com"
+        "sitename": "twaho"
     },
     "page": {
-      "twitter_handle": {"value": "@CHANGEME"},
+      "twitter_handle": {"value": "@TwahoGh"},
       "twitter_image": {"type": "assets", "id": "hero_background_image"},
       "facebook_image": {"type": "assets", "id": "hero_background_image"},
       "title": {"type": "marketplace_data", "id": "page_title"},
@@ -425,8 +425,8 @@ JSON
                     "background_image": {"type": "assets", "id": "category1_background_image"}
                 },
                 {
-                    "category": { "type": "category", "id": 2 },
-                    "background_image": {"type": "assets", "id": "category2_background_image"}
+                    "category": { "type": "category", "id": 6 },
+                    "background_image": {"type": "assets", "id": "category6_background_image"}
                 },
                 {
                     "category": { "type": "category", "id": 3 },
@@ -434,11 +434,11 @@ JSON
                 },
                 {
                     "category": { "type": "category", "id": 5 },
-                    "background_image": {"type": "assets", "id": "category3_background_image"}
+                    "background_image": {"type": "assets", "id": "category5_background_image"}
                 },
                 {
-                    "category": { "type": "category", "id": 7 },
-                    "background_image": {"type": "assets", "id": "category3_background_image"}
+                    "category": { "type": "category", "id": 4 },
+                    "background_image": {"type": "assets", "id": "category4_background_image"}
                 }
             ]
         },
@@ -483,14 +483,14 @@ JSON
             "social_media_icon_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
             "links": [
                 {"label": "About", "href": {"type": "path", "id": "about"}},
-                {"label": "Example Link", "href": {"value": "https://www.sharetribe.com"}},
+                {"label": "Contact Dev", "href": {"value": "https://vasnte.com"}},
                 {"label": "Invite new members", "href": {"type": "path", "id": "new_invitation"}},
                 {"label": "Contact us", "href": {"type": "path", "id": "contact_us"}}
             ],
             "social": [
-                {"service": "facebook", "url": "https://www.facebook.com/CHANGEME"},
-                {"service": "twitter", "url": "https://www.twitter.com/CHANGEME"},
-                {"service": "instagram", "url": "https://www.instagram.com/CHANGEME"}
+                {"service": "facebook", "url": "https://www.facebook.com/twahoGH"},
+                {"service": "twitter", "url": "https://www.twitter.com/twahoGH"},
+                {"service": "instagram", "url": "https://www.instagram.com/twahoGH"}
             ],
             "copyright": "powered by Africa"
         }
@@ -503,9 +503,11 @@ JSON
     "assets": [
         {"id": "hero_background_image", "src": "felipe-luiz-smile-ghana-twaho-market.jpg", "content_type": "image/jpeg"},
         {"id": "info_background_image", "src": "example_bg_lighter.jpg", "content_type": "image/jpeg"},
-        {"id": "category1_background_image", "src": "example_bg_lighter.jpg", "content_type": "image/jpeg"},
-        {"id": "category2_background_image", "src": "example_bg_lighter.jpg", "content_type": "image/jpeg"},
-        {"id": "category3_background_image", "src": "example_bg_lighter.jpg", "content_type": "image/jpeg"}
+        {"id": "category1_background_image", "src": "cars-vehicles-ghana-auto-twaho-marketplace.jpg", "content_type": "image/jpeg"},
+        {"id": "category6_background_image", "src": "aaron-burden-twaho-ghana-electronics.jpg", "content_type": "image/jpeg"},
+        {"id": "category3_background_image", "src": "breather-187923.jpg", "content_type": "image/jpeg"},
+        {"id": "category5_background_image", "src": "hannah-grace-385877.jpg", "content_type": "image/jpeg"},
+        {"id": "category4_background_image", "src": "twaho-market-jobs.ghana.jpg", "content_type": "image/jpeg"}
     ]
 }
 
