@@ -289,7 +289,7 @@ module.exports = {
   '--AddNewListingButton_height': topbarItemHeight,
   '--AddNewListingButton_tabletHeight': topbarMediumItemHeight,
   '--AddNewListingButton_defaultColor': '#43A5CC',
-  '--AddNewListingButton_textSize': fontSize,
+  '--AddNewListingButton_textSize': fontSizeTiny,
   '--AddNewListingButton_textSizeTablet': fontSizeSmall,
   '--AddNewListingButton_textColor': '#fff',
   '--AddNewListingButton_maxTextWidth': '15em',
