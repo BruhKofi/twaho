@@ -1,6 +1,6 @@
 html {
-  box-sizing: border-box;
-  font-size: 14px;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 
 *,
@@ -10,15 +10,15 @@ html {
 }
 
 body {
-  background: white;
-  color: #3c3c3c;
-  height: auto;
-  font-family: 'Montserrat', Josefin Sans, sans-serif;
-  font-size: 1em;
-  line-height: 1.5em;
-  margin: 0;
+    background: white;
+    color: #3c3c3c;
+    height: auto;
+    font-family: Montserrat, 'Josefin Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
