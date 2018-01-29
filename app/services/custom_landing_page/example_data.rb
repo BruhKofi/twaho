@@ -225,6 +225,14 @@ module CustomLandingPage
             {
                 "category": { "type": "category", "id": 99999 },
                 "background_image": {"type": "assets", "id": "default_hero_background"}
+            },
+            {
+                "category": { "type": "category", "id": 99999 },
+                "background_image": {"type": "assets", "id": "default_hero_background"}
+            },
+            {
+                "category": { "type": "category", "id": 99999 },
+                "background_image": {"type": "assets", "id": "default_hero_background"}
             }
         ]
     },
@@ -283,6 +291,7 @@ module CustomLandingPage
 
   "composition": [
     { "section": {"type": "sections", "id": "hero"}},
+    { "section": {"type": "sections", "id": "categories"}},
     { "section": {"type": "sections", "id": "markdown_support"}},
     { "section": {"type": "sections", "id": "single_info_without_background_and_cta"}},
     { "section": {"type": "sections", "id": "single_info_without_cta"}},
@@ -445,11 +454,10 @@ JSON
         {
             "id": "listings",
             "kind": "listings",
-            "title": "Section title goes here",
-            "paragraph": "Section paragraph goes here",
+            "title": "Latest Listings",
             "button_color": {"type": "marketplace_data", "id": "primary_color"},
             "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
-            "button_title": "Section link",
+            "button_title": "Show me more",
             "button_path": {"value": "/s?category=all"},
             "price_color": {"type": "marketplace_data", "id": "primary_color"},
             "no_listing_image_background_color": {"type": "marketplace_data", "id": "primary_color"},
@@ -460,12 +468,24 @@ JSON
                     "listing": { "type": "listing", "id": 1 }
                 },
                 {
-                    "listing": { "type": "listing", "id": 1 }
+                    "listing": { "type": "listing", "id": 2 }
                 },
                 {
-                    "listing": { "type": "listing", "id": 1 }
+                    "listing": { "type": "listing", "id": 3 }
                 }
             ]
+        },
+        {
+          "id": "sell_cta",
+          "kind": "info",
+          "variation": "single_column",
+          "title": "Start Selling",
+          "paragraph": "Want to Reach Even More Customers? Start Selling Now",
+          "button_color": {"type": "marketplace_data", "id": "primary_color"},
+          "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
+          "button_title": "Yes I want to Sell Now",
+          "button_path": {"value": "en/listings/new"},
+          "background_color": [166, 76, 94]
         },
         {
             "id": "video",
@@ -483,7 +503,7 @@ JSON
             "social_media_icon_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
             "links": [
                 {"label": "About", "href": {"type": "path", "id": "about"}},
-                {"label": "Contact Dev", "href": {"value": "https://vasnte.com"}},
+                {"label": "Contact Dev", "href": {"value": "en/user_feedbacks/new"}},
                 {"label": "Invite new members", "href": {"type": "path", "id": "new_invitation"}},
                 {"label": "Contact us", "href": {"type": "path", "id": "contact_us"}}
             ],
@@ -492,12 +512,14 @@ JSON
                 {"service": "twitter", "url": "https://www.twitter.com/twahoGH"},
                 {"service": "instagram", "url": "https://www.instagram.com/twahoGH"}
             ],
-            "copyright": "powered by Africa"
+            "copyright": "powered by AE"
         }
     ],
     "composition": [
         { "section": {"type": "sections", "id": "hero"}},
         { "section": {"type": "sections", "id": "categories"}},
+        { "section": {"type": "sections", "id": "listings"}},
+        { "section": {"type": "sections", "id": "sell_cta"}},
         { "section": {"type": "sections", "id": "footer"}}
     ],
     "assets": [
