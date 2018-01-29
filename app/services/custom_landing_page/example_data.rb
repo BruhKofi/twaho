@@ -417,7 +417,7 @@ JSON
             "button_color": {"type": "marketplace_data", "id": "primary_color"},
             "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
             "button_title": "Browse All Categories",
-            "button_path": {"value": "/s?category=all"},
+            "button_path": {"value": "/s"},
             "category_color_hover": {"type": "marketplace_data", "id": "primary_color"},
             "categories": [
                 {
