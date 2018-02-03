@@ -16,11 +16,15 @@ $home-thumbnail-grid-author: $home-thumbnail-grid-avatar+($home-thumbnail-grid-a
 
 .home-fluid-thumbnail-grid-author {
     @include border-bottom-radius($default-border-radius);
-    background-color: $highlight;
+    border: 1px solid #eaeaea;
+    background-color: white;
     height: $home-thumbnail-grid-author;
     position: relative;
 }
 
+// .home-fluid-thumbnail-grid-author:hover {
+//     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+// }
 .home-fluid-thumbnail-grid-author-avatar {
     padding: $home-thumbnail-grid-avatar-padding;
 }
