@@ -37,7 +37,6 @@
     @include listing-price;
     font-size: 12px; // Quantity placeholder font-size, so that the ellipsis looks nice
     max-width: 75%;
-    border-radius: 50%;
     background: rgba(255, 255, 255, 0.5);
     @include ellipsis;
 }
